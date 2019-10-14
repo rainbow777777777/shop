@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>DouPHP 管理中心 </title>
+    <meta name="Copyright" content="Douco Design." />
+    {load href="/shop/public/static/admin/css/public.css"}
+    {load href="/shop/public/static/admin/js/jquery.min.js"}
+    {load href="/shop/public/static/admin/js/global.js"}
+</head>
+<body>
+<div id="dcWrap">
+    <div id="dcHead">
+
+        <!-- dcHead 开始 -->
+        {include file="/public/header"}
+        <!-- dcHead 结束 -->
+
+        <!--左侧展示 开始-->
+        {include file="public/left"}
+        <!--左侧展示 结束-->
+
+        <div id="dcMain">
+            <!-- 当前位置 -->
+            <div id="urHere">DouPHP 管理中心<b>></b><strong>添加权限</strong> </div><div id="manager" class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
+            <h3><a href="{:url('node/show')}" class="actionBtn">返回列表</a>添加权限</h3>
+            <form action="" method="post">
+                <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
+                    <tr>
+                        <td width="100" align="right">权限名称</td>
+                        <td>
+                            <input type="text" name="node_name" size="40" class="inpMain" />
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td width="100" align="right">权限等级</td>
+                        <td>
+                            <select name="" id="">
+                                <option value=""></option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td width="100" align="right">左侧显示</td>
+                        <td>
+                            <input type="radio" name="is_menu" value="1">显示
+                            <input type="radio" name="is_menu" value="0">不显示
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td align="right">对应控制器</td>
+                        <td>
+                            <input type="text" name="controller" size="40" class="inpMain" />
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td align="right">对应方法</td>
+                        <td>
+                            <input type="text" name="action" size="40" class="inpMain" />
+                        </td>
+                    </tr>
+
+                    <!--<tr>-->
+                        <!--<td align="right">URL地址</td>-->
+                        <!--<td>-->
+                            <!--<input type="text" name="url" size="40" class="inpMain" />-->
+                        <!--</td>-->
+                    <!--</tr>-->
+
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="hidden" name="token" value="5a58b748" />
+                            <input type="submit" name="submit" class="btn" value="提交" />
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        </div>
+        <div class="clear"></div>
+        <div id="dcFooter">
+            <div id="footer">
+                <div class="line"></div>
+                <ul>
+                    版权所有 © 2013-2015 漳州豆壳网络科技有限公司，并保留所有权利。
+                </ul>
+            </div>
+        </div><!-- dcFooter 结束 -->
+        <div class="clear"></div> </div>
+</body>
+</html>

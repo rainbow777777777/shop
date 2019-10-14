@@ -31,9 +31,7 @@ class login extends Controller
             ->where("admin_name",$admin_name)
             ->where("admin_pwd",$admin_pwd)
             ->find();
-            //存储session
-            if($admin)
-            {
+            if($admin){
                 //存储session
                 Session('admin',$admin);
                 $this->success("登录成功","Admin/index");

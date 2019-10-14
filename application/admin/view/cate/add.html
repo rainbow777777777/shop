@@ -13,36 +13,17 @@
  <!-- hedaer 开始 -->
  {include file="public/header" /}
  <!-- hedaer 结束 -->
-<!-- dcHead 结束 --> <div id="dcLeft"><div id="menu">
- <ul class="top">
-  <li><a href="index.html"><i class="home"></i><em>管理首页</em></a></li>
- </ul>
- <ul>
-  <li><a href="system.html"><i class="system"></i><em>系统设置</em></a></li>
-  <li><a href="nav.html"><i class="nav"></i><em>自定义导航栏</em></a></li>
-  <li><a href="show.html"><i class="show"></i><em>首页幻灯广告</em></a></li>
-  <li><a href="page.html"><i class="page"></i><em>单页面管理</em></a></li>
- </ul>
-   <ul>
-  <li class="cur"><a href="product_category.html"><i class="productCat"></i><em>商品分类</em></a></li>
-  <li><a href="product.html"><i class="product"></i><em>商品列表</em></a></li>
- </ul>
-  <ul>
-  <li><a href="article_category.html"><i class="articleCat"></i><em>文章分类</em></a></li>
-  <li><a href="article.html"><i class="article"></i><em>文章列表</em></a></li>
- </ul>
-   <ul class="bot">
-  <li><a href="backup.html"><i class="backup"></i><em>数据备份</em></a></li>
-  <li><a href="mobile.html"><i class="mobile"></i><em>手机版</em></a></li>
-  <li><a href="theme.html"><i class="theme"></i><em>设置模板</em></a></li>
-  <li><a href="manager.html"><i class="manager"></i><em>网站管理员</em></a></li>
-  <li><a href="manager.php?rec=manager_log"><i class="managerLog"></i><em>操作记录</em></a></li>
- </ul>
-</div></div>
+<!-- dcHead 结束 -->
+
+
+    <!--左侧展示 开始-->
+    {include file="public/left"}
+    <!--左侧展示 结束-->
+
  <div id="dcMain">
    <!-- 当前位置 -->
 <div id="urHere">DouPHP 管理中心<b>></b><strong>添加分类</strong> </div>   <div class="mainBox" style="height:auto!important;height:550px;min-height:550px;">
-            <h3><a href="product_category.html" class="actionBtn">商品分类</a>添加分类</h3>
+            <h3><a href="{:url('Cate/show')}" class="actionBtn">商品分类</a>添加分类</h3>
     <form action="" method="post">
      <table width="100%" border="0" cellpadding="8" cellspacing="0" class="tableBasic">
       <tr>
@@ -61,13 +42,13 @@
        <td align="right">上级分类</td>
        <td>
         <select name="cate_pid">
-         <option value="0">无</option>
-                           <option value="1"> 电子数码</option>
-                                    <option value="4">- 智能手机</option>
-                                    <option value="5">- 平板电脑</option>
-                                    <option value="2"> 家居百货</option>
-                                    <option value="3"> 母婴用品</option>
-                          </select>
+            <option value="0">无</option>
+            <option value="1"> 电子数码</option>
+            <option value="4">- 智能手机</option>
+            <option value="5">- 平板电脑</option>
+            <option value="2"> 家居百货</option>
+            <option value="3"> 母婴用品</option>
+        </select>
        </td>
       </tr>
       <tr>
