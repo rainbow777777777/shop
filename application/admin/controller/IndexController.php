@@ -10,7 +10,7 @@ namespace app\admin\controller;
 use think\Controller;
 use think\Db;
 
-class admin extends Controller{
+class IndexController extends Controller{
     public function index()
     {
         return view();

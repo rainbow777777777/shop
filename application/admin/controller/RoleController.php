@@ -1,19 +1,18 @@
 <?php
 namespace app\admin\controller;
 
-
-use app\admin\model\MangagerModel;
 use think\Controller;
 use think\Db;
 
-class mangager extends Controller{
-    //管理员列表
+class RoleController extends Controller{
+    //角色管理
     public function show(){
-        $mangager=Db::table("online_admin")
-            ->select();
-        return view("",["mangager"=>$mangager]);
+//        $mangager=Db::table("online_admin")
+//            ->select();
+//        return view("",["mangager"=>$mangager]);
+            return view();
     }
-    //添加管理员
+    //添加角色
     public  function add(){
         if(request()->isGet()){
             return view();

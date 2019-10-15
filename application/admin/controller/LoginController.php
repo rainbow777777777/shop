@@ -7,10 +7,13 @@
  */
 namespace app\admin\controller;
 
+
+use app\admin\model\Admin;
 use think\Db;
 use think\Controller;
+use think\facade\Session;
 
-class login extends Controller
+class LoginController extends Controller
 {
     public function login()
     {
@@ -22,9 +25,9 @@ class login extends Controller
         {
             //接值
             $admin_name=request()->post("admin_name","");
-            $admin_pwd =request()->post("admin_pwd","");
+            $admin_sort=Session::get("admin_sort");
+            $admin_pwd =md5(md5(request()->post("admin_pwd","")).$admin_sort);
             //验证
-
             //连接数据库
             $admin=Db::table("online_admin")
             ->field(["admin_name","admin_pwd"])
@@ -34,9 +37,13 @@ class login extends Controller
             if($admin){
                 //存储session
                 Session('admin',$admin);
-                $this->success("登录成功","Admin/index");
+                $admin_last_time=Admin::get(1);
+                $admin_last_time->admin_last_time=time();
+                $admin_last_time->save();
+                $this->success("登录成功","index/index");
+
             }else{
-                $this->error("登录失败");
+                $this->error("登录失败");exit;
             }
         }
     }
